@@ -1,0 +1,43 @@
+slots:
+  affects:
+    mappings:
+      - biolink:probe1
+      - biolink:probe2
+      - biolink:probe4
+  causes:
+    is_a: contributes to
+    in_subset:
+      - translator_minimal
+  contributes to:
+    is_a: related to
+  negatively regulates, process to process:
+    is_a: regulates, process to process
+    mappings:
+      - biolink:probe2
+      - biolink:probe3
+      - biolink:probe4
+  positively regulates, entity to entity:
+    is_a: regulates, process to process
+    mappings:
+      - biolink:probe3
+      - biolink:probe4
+  regulates:
+    is_a: affects
+  regulates, entity to entity:
+    is_a: regulates
+    mappings:
+      - biolink:probe3
+      - biolink:probe4
+  regulates, process to process:
+    is_a: regulates
+    mappings:
+      - biolink:probe3
+      - biolink:probe4
+  related to: {}
+
+classes:
+  gene:
+    is_a: named thing
+  locus:
+    is_a: named thing
+  named thing: {}
